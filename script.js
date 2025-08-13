@@ -5,29 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe 'active' de todos os botões e conteúdos
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
 
-            // Adiciona a classe 'active' no botão clicado
             button.classList.add('active');
 
-            // Adiciona a classe 'active' no conteúdo correspondente
             const tabId = button.getAttribute('data-tab');
             document.getElementById(tabId).classList.add('active');
         });
     });
 });
 
-// Rolagem suave até seções e mostrar animações
+// Rolagem suave e ativação das seções
 document.querySelectorAll('.link-section').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (target) {
-            // Adiciona a classe para animar a seção
-            target.classList.add('section-visible');
-            // Rola suavemente até a seção
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
