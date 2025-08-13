@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Rolagem suave e ativação das seções
-document.querySelectorAll('.link-section').forEach(link => {
+document.querySelectorAll('.link-section, .cta').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
@@ -48,3 +48,26 @@ document.querySelectorAll('.link-section').forEach(link => {
         }
     });
 });
+
+// Lógica do formulário de contato
+window.onload = function() {
+    // Inicializa o EmailJS com o seu User ID
+    emailjs.init("oV0tAQAk7NKybaRJn");
+
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const serviceID = "service_ub6xlfc";
+        const templateID = "template_1ea4ta6";
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                alert("Mensagem enviada com sucesso!");
+                contactForm.reset();
+            }, (error) => {
+                console.log('FALHA...', error);
+                alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+            });
+    });
+}
