@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Segurança & Eventos</title>
+  <title>JS Segurança & Eventos | Proteção e Excelência</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
@@ -23,6 +23,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#servicos" class="link-section">Serviços</a></li>
         <li><a href="#sobre" class="link-section">Sobre</a></li>
+        <li><a href="#galeria" class="link-section">Galeria</a></li>
         <li><a href="#contato" class="link-section">Contato</a></li>
         <li><a href="perfis.html">Perfis</a></li>
       </ul>
@@ -32,42 +33,61 @@
 </header>
 
 <main>
-  <!-- HERO -->
-  <section id="home" class="hero">
+  <section id="home" class="hero section-visible">
     <div class="hero-text">
-      <h2>Segurança e Organização Profissional</h2>
-      <p>Equipe treinada, tecnologia de ponta e operação discreta para que seu evento ocorra com tranquilidade e segurança.</p>
+      <h2>Segurança e Tranquilidade para o seu Evento</h2>
+      <p>Na **JS Segurança & Eventos**, transformamos a proteção em uma arte. Desde 2022, nossa equipe altamente competente atua em eventos, shows e estabelecimentos, garantindo a tranquilidade do seu público com excelência e discrição. Cuidamos de cada detalhe, do controle de acesso à segurança privada, para que você possa focar no que realmente importa: o sucesso do seu evento.</p>
       <a class="cta link-section" href="#servicos">Nossos Serviços</a>
     </div>
-    <div class="hero-img">
-      <img src="assets/logo.png" alt="Logo JS Segurança">
+  </section>
+
+  <section id="servicos" class="section-hidden">
+    <h2>Nossos Serviços</h2>
+    <p>Oferecemos uma gama completa de soluções de segurança e organização, adaptadas às necessidades do seu evento.</p>
+    
+    <div class="services-tabs-container">
+        <div class="services-tabs">
+            <button class="tab-button active" data-tab="seguranca-privada">Segurança Privada</button>
+            <button class="tab-button" data-tab="controle-acesso">Controle de Acesso</button>
+            <button class="tab-button" data-tab="brigada">Brigada & Primeiros Socorros</button>
+        </div>
+        <div class="services-content">
+            <div id="seguranca-privada" class="tab-content active">
+                <h3>Segurança Privada e Eventos</h3>
+                <p>A proteção é a nossa especialidade. Nossa equipe é treinada para atuar de forma estratégica e discreta, garantindo a integridade de pessoas e patrimônio. Cobrimos toda a área de segurança, da prevenção de conflitos à resposta rápida em situações emergenciais.</p>
+            </div>
+            <div id="controle-acesso" class="tab-content">
+                <h3>Controle de Acesso (Portaria e Revista)</h3>
+                <p>O primeiro e o último contato com o seu público. Nossos profissionais são treinados para um controle de acesso eficiente e cortês. Realizamos revistas e fiscalização de forma profissional, garantindo que a entrada e saída de pessoas ocorram com total segurança e fluidez.</p>
+            </div>
+            <div id="brigada" class="tab-content">
+                <h3>Brigada e Primeiros Socorros</h3>
+                <p>Mais do que seguranças, somos uma equipe de apoio. Nossos brigadistas são capacitados para lidar com situações de emergência, incluindo primeiros socorros, evacuação e combate a incêndios. A pronta-resposta da nossa brigada assegura que o seu evento está preparado para qualquer imprevisto.</p>
+            </div>
+        </div>
     </div>
   </section>
-
-  <!-- SOBRE -->
+  
   <section id="sobre" class="section-hidden">
-    <h2>Sobre Nós</h2>
-    <p>Com anos de experiência, a JS Segurança & Eventos é referência em soluções personalizadas, com profissionais capacitados e certificados.</p>
+    <h2>Compromisso e Crescimento Constante</h2>
+    <p>Fundada em 2022, a **JS Segurança & Eventos** nasceu com a missão de elevar os padrões de segurança e organização em qualquer tipo de evento. Somos uma empresa jovem e ambiciosa, mas com uma base sólida de experiência e um histórico de grandes referências que atestam a qualidade do nosso trabalho.</p>
+    <br>
+    <p>Nossa força está na competência da nossa equipe. Cada profissional é minuciosamente selecionado, treinado e certificado para atuar em diferentes frentes: da **brigada de segurança** em shows e bares, ao **controle de acesso** e **segurança privada**. Estamos em constante aprimoramento, buscando novas tecnologias e métodos para superar as expectativas dos nossos clientes e crescer junto com eles. A sua segurança é o nosso projeto mais importante.</p>
   </section>
 
-  <!-- SERVIÇOS / GALERIA -->
-  <section id="servicos" class="section-hidden">
+  <section id="galeria" class="section-hidden">
     <h2>Galeria de Eventos</h2>
     <div class="gallery-container">
-      <div class="gallery-images">
-        <img src="assets/foto1.jpg" alt="Evento 1">
-        <img src="assets/foto2.jpg" alt="Evento 2">
-        <img src="assets/foto3.jpg" alt="Evento 3">
-        <img src="assets/foto4.jpg" alt="Evento 4">
+      <img src="assets/foto1.jpg" alt="Evento 1">
+      <img src="assets/foto2.jpg" alt="Evento 2">
+      <img src="assets/foto3.jpg" alt="Evento 3">
+      <img src="assets/foto4.jpg" alt="Evento 4">
       </div>
-      <button class="gallery-prev">&#10094;</button>
-      <button class="gallery-next">&#10095;</button>
-    </div>
   </section>
 
-  <!-- CONTATO -->
   <section id="contato" class="section-hidden">
     <h2>Contato</h2>
+    <p>Entre em contato conosco para solicitar um orçamento ou tirar suas dúvidas.</p>
     <form id="contact-form">
       <input type="text" name="name" placeholder="Seu Nome" required>
       <input type="email" name="email" placeholder="Seu Email" required>
