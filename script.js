@@ -33,3 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+// Rolagem suave e ativação das seções
+document.querySelectorAll('.link-section').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            // Garante que a seção se torne visível antes de rolar
+            target.classList.remove('section-hidden');
+            target.classList.add('section-visible');
+            // Rola suavemente até a seção
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
