@@ -412,14 +412,23 @@ footer {
         gap: 15px;
     }
 
+    header .brand h1 {
+        font-size: 1.2rem;
+    }
+
     nav {
         flex-direction: column;
         gap: 10px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a.cta {
+        margin-top: 10px;
     }
 
     .hero-text h2 {
@@ -434,11 +443,7 @@ footer {
         font-size: 2rem;
     }
 
-    .team-card {
-        width: 100%;
-    }
-
-    .services-tabs {
-        flex-direction: column;
+    section {
+        padding: 50px 0;
     }
 }
